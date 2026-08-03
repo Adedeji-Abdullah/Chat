@@ -1,0 +1,128 @@
+.app-shell {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #fff0f6;
+}
+
+.chat-card {
+  width: min(100%, 720px);
+  padding: 40px 32px;
+  border-radius: 24px;
+  background: #ffffff;
+  border: 1px solid #ffd6e8;
+  box-shadow: 0 24px 60px rgba(255, 157, 185, 0.14);
+  text-align: center;
+}
+
+.chat-card h1 {
+  margin: 0 0 16px;
+  color: #6c1d43;
+  font-size: 2.4rem;
+}
+
+.chat-card p {
+  margin: 0;
+  color: #5d3148;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.auth-page {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 24px;
+  background: radial-gradient(circle at top, #ffe5f0 0%, #fff8fb 52%, #ffffff 100%);
+}
+
+.auth-card {
+  width: min(100%, 420px);
+  background: #ffffff;
+  border: 1px solid rgba(255, 173, 205, 0.55);
+  border-radius: 28px;
+  padding: 36px 32px;
+  box-shadow: 0 24px 60px rgba(255, 160, 187, 0.16);
+  text-align: left;
+}
+
+.auth-card h1 {
+  margin: 0 0 10px;
+  font-size: 2.2rem;
+  color: #5c1d43;
+}
+
+.auth-subtitle {
+  margin: 0 0 28px;
+  color: #7a4d72;
+  line-height: 1.6;
+}
+
+.auth-form {
+  display: grid;
+  gap: 18px;
+}
+
+.auth-field {
+  display: grid;
+  gap: 8px;
+}
+
+.auth-field label {
+  color: #7a4d72;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.auth-field input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 183, 206, 0.8);
+  background: #fff6fb;
+  color: #4d2d4c;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auth-field input:focus {
+  border-color: #ff6f9f;
+  box-shadow: 0 0 0 4px rgba(255, 151, 187, 0.18);
+}
+
+.auth-button {
+  width: 100%;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ff6f9f 0%, #ff4d84 100%);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auth-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 32px rgba(255, 77, 132, 0.24);
+}
+
+.auth-footer {
+  margin: 24px 0 0;
+  color: #7a4d72;
+  font-size: 0.95rem;
+}
+
+.auth-footer a {
+  color: #d42d78;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
