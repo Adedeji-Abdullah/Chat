@@ -20,7 +20,6 @@ app.get('/', (req, res) => {
 
 app.post('/register', async (req, res) => {
     try {
-        // const { name, email, password } = req.body;
         const body = await new Auth(req.body);
         const result = await body.save();
         res.json(result);
@@ -31,12 +30,37 @@ app.post('/register', async (req, res) => {
     }
 });
 
+app.post('/login', async (req, res) => {
+    try {
+        const { email, password } = req.body;
+        if (!email || !password) {
+            return res.status(400).json({ error: 'Email and password are required' });
+        }
+
+        const user = await Auth.findOne({ email });
+        if (!user) {
+            return res.status(404).json({ error: 'User not found' });
+        }
+
+        if (user.password !== password) {
+            return res.status(401).json({ error: 'Invalid password' });
+        }
+
+        res.json({ message: 'Login successful' });
+    } catch (error) {
+        console.error('Error logging in user', error);
+        res.status(500).json({ error: 'Error logging in user' });
+    }
+});
+
 app.get("/Info/:email", async(req, res) => {
     try {
         const data = await Auth.findOne({ email: req.params.email });
-        // const result = data.json()
-        res.json({data})
-        console.log({data})
+        console.log({ data })
+        if (!data) {
+           return res.status(404).json("Error: user not found")
+        }
+        res.json({ data })
     } catch (error) {
         console.log("An error occur in displaying logged in users", error)
         res.status(500).json({error: "Something went wrong"})
