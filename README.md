@@ -8,7 +8,7 @@ HOW TO GET STARTED WITH CHATTING.
 4. your result will appear and you may click it
 5. After clicking, you are ready to start your chat with anyone around the universe that's logged in 🥳🥳🎉🎉
 
-   And for developers who wish to clone it, you can simply follow this 2 steps below
+And for developers who wish to clone it, you can simply follow this 2 steps below
 
 1. After cloning you should run npm install in your terminal
 2. then you can now set up your .env file
