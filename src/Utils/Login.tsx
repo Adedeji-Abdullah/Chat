@@ -25,6 +25,7 @@ const Login = () => {
 
         if (response.ok) {
           localStorage.setItem('token', 'logged-in')
+          localStorage.setItem('email', email.trim().toLowerCase())
           navigate('/')
           return
         }
