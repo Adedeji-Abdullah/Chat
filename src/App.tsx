@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Dashboard from './Utils/Dashboard'
 import PrivateRoute from './Utils/PrivateRoute'
 import Login from './Utils/Login'
