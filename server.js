@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-const PORT = process.env.PORT || 3005;
+const PORT = process.env.PORT || 4000;
 const CONNECTION = process.env.CONNECTION || 'mongodb://localhost:27017/';
 
 // create HTTP server and socket.io

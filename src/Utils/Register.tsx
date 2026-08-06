@@ -16,7 +16,7 @@ const Register = () => {
     e.preventDefault()
 
     try {
-        const data = await fetch("http://localhost:3005/register", {
+        const data = await fetch("http://localhost:4000/register", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
