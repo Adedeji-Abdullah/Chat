@@ -16,7 +16,7 @@ const Register = () => {
     e.preventDefault()
 
     try {
-        const data = await fetch("http://localhost:4000/register", {
+        const data = await fetch("https://chat-1-n1mo.onrender.com/register", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

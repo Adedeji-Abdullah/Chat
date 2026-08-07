@@ -55,7 +55,7 @@ const Dashboard = () => {
     setLoading(true)
     setError('')
     try {
-      const response = await fetch(`http://localhost:4000/users${searchText ? `?search=${encodeURIComponent(searchText)}` : ''}`)
+      const response = await fetch(`https://chat-1-n1mo.onrender.com/users${searchText ? `?search=${encodeURIComponent(searchText)}` : ''}`)
       const data = await response.json()
       if (!response.ok) {
         throw new Error(data.error || 'Failed to load users')
@@ -115,7 +115,7 @@ const Dashboard = () => {
   const fetchConversation = async (peerEmail: string) => {
     if (!currentUserEmail) return
     try {
-      const res = await fetch(`http://localhost:4000/messages?user=${encodeURIComponent(currentUserEmail)}&peer=${encodeURIComponent(peerEmail)}`)
+      const res = await fetch(`https://chat-1-n1mo.onrender.com/messages?user=${encodeURIComponent(currentUserEmail)}&peer=${encodeURIComponent(peerEmail)}`)
       const msgs = await res.json()
       if (!res.ok) throw new Error(msgs.error || 'Failed to load messages')
       setMessages(msgs || [])
@@ -135,7 +135,7 @@ const Dashboard = () => {
   }, [])
 
   useEffect(() => {
-    const s = io('http://localhost:4000', {
+    const s = io('https://chat-1-n1mo.onrender.com', {
       reconnectionAttempts: 5,
       transports: ['websocket', 'polling'],
     })
@@ -296,7 +296,7 @@ const Dashboard = () => {
                 appendMessageIfNew(optimisticMessage)
                 setNewMessage('')
 
-                fetch('http://localhost:4000/messages', {
+                fetch('https://chat-1-n1mo.onrender.com/messages', {
                   method: 'POST',
                   headers: { 'Content-Type': 'application/json' },
                   body: JSON.stringify(payload)
