@@ -12,7 +12,8 @@ dotenv.config();
 
 const app = express();
 app.use(cors({
-    origin: 'https://chat-tau-mauve-70.vercel.app'
+    origin: 'https://chat-tau-mauve-70.vercel.app',
+    origin: 'https://chat-comm.vercel.app/'
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
