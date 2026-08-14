@@ -365,3 +365,73 @@
   color: #7a4d72;
 }
 
+@media (max-width: 900px) {
+  .dashboard-shell {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .dashboard-sidebar,
+  .dashboard-content {
+    width: 100%;
+  }
+
+  .chat-window {
+    height: min(60vh, 520px);
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard-shell {
+    padding: 14px;
+    gap: 16px;
+  }
+
+  .dashboard-sidebar,
+  .dashboard-content {
+    padding: 20px 16px;
+    border-radius: 20px;
+  }
+
+  .dashboard-sidebar h2 {
+    font-size: 1.5rem;
+  }
+
+  .sidebar-search,
+  .sidebar-actions,
+  .dashboard-header,
+  .message-input {
+    flex-direction: column;
+  }
+
+  .sidebar-search button,
+  .sidebar-action-button,
+  .dashboard-logout,
+  .message-input button {
+    width: 100%;
+  }
+
+  .dashboard-header {
+    align-items: stretch;
+  }
+
+  .dashboard-header h1 {
+    font-size: 1.9rem;
+  }
+
+  .chat-window {
+    height: 50vh;
+    min-height: 360px;
+  }
+
+  .message {
+    max-width: 85%;
+    padding: 10px 12px;
+  }
+
+  .search-item,
+  .search-empty {
+    padding: 14px;
+  }
+}
+
